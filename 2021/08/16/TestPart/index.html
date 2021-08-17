@@ -20,25 +20,30 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="之前因为导师科研，所以需要我做一份Hololens2的选择测试小程序，第一次接触Hololens的萌新就开始捣鼓，有一点点小收获，甚至还发现了官方文档的错误（？）。   直接触控：   微软的官方文档里面给出了详细的操作方式，要求可触摸的物体需要有：1.碰撞体 2.NearInteractionTouchableVolume组件。然后给出了触控代码示例，如下图：  但是当我原样抄过来之后是这样">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test_my_site">
-<meta property="og:url" content="http://example.com/2021/08/16/test-my-site/index.html">
+<meta property="og:title" content="Hololens2获取触碰和射线落点的位置">
+<meta property="og:url" content="http://example.com/2021/08/16/TestPart/index.html">
 <meta property="og:site_name" content="WhatsWrong">
+<meta property="og:description" content="之前因为导师科研，所以需要我做一份Hololens2的选择测试小程序，第一次接触Hololens的萌新就开始捣鼓，有一点点小收获，甚至还发现了官方文档的错误（？）。   直接触控：   微软的官方文档里面给出了详细的操作方式，要求可触摸的物体需要有：1.碰撞体 2.NearInteractionTouchableVolume组件。然后给出了触控代码示例，如下图：  但是当我原样抄过来之后是这样">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-08-16T01:51:24.000Z">
-<meta property="article:modified_time" content="2021-08-16T01:51:24.066Z">
+<meta property="og:image" content="file:///C:/Users/DELL/AppData/Roaming/Tencent/Users/763560240/TIM/WinTemp/RichOle/C(5UA3%60N%Z]EXIJTXY~@$XQ.png">
+<meta property="og:image" content="file:///C:/Users/DELL/AppData/Roaming/Tencent/Users/763560240/TIM/WinTemp/RichOle/A(MW%7BOFT%60%7B9])2A">
+<meta property="article:published_time" content="2021-08-16T13:05:17.000Z">
+<meta property="article:modified_time" content="2021-08-17T08:45:59.060Z">
 <meta property="article:author" content="ZYY">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="file:///C:/Users/DELL/AppData/Roaming/Tencent/Users/763560240/TIM/WinTemp/RichOle/C(5UA3%60N%Z]EXIJTXY~@$XQ.png">
 
 
-<link rel="canonical" href="http://example.com/2021/08/16/test-my-site/">
+<link rel="canonical" href="http://example.com/2021/08/16/TestPart/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2021/08/16/test-my-site/","path":"2021/08/16/test-my-site/","title":"test_my_site"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2021/08/16/TestPart/","path":"2021/08/16/TestPart/","title":"Hololens2获取触碰和射线落点的位置"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>test_my_site | WhatsWrong</title>
+<title>Hololens2获取触碰和射线落点的位置 | WhatsWrong</title>
   
 
 
@@ -170,7 +175,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/16/test-my-site/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/16/TestPart/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -183,7 +188,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          test_my_site
+          Hololens2获取触碰和射线落点的位置
         </h1>
 
         <div class="post-meta-container">
@@ -194,8 +199,15 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-08-16 09:51:24" itemprop="dateCreated datePublished" datetime="2021-08-16T09:51:24+08:00">2021-08-16</time>
+      <time title="创建时间：2021-08-16 21:05:17" itemprop="dateCreated datePublished" datetime="2021-08-16T21:05:17+08:00">2021-08-16</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-17 16:45:59" itemprop="dateModified" datetime="2021-08-17T16:45:59+08:00">2021-08-17</time>
+      </span>
 
   
 </div>
@@ -207,7 +219,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        
+        <p>  之前因为导师科研，所以需要我做一份Hololens2的选择测试小程序，第一次接触Hololens的萌新就开始捣鼓，有一点点小收获，甚至还发现了官方文档的错误（？）。</p>
+<p>  直接触控：</p>
+<p>  微软的官方文档里面给出了详细的操作方式，要求可触摸的物体需要有：1.碰撞体 2.NearInteractionTouchableVolume组件。然后给出了触控代码示例，如下图：</p>
+<p><img src="file:///C:\Users\DELL\AppData\Roaming\Tencent\Users\763560240\TIM\WinTemp\RichOle\C(5UA3`N%Z]EXIJTXY~@$XQ.png" alt="img"></p>
+<p>但是当我原样抄过来之后是这样的：</p>
+<p><img src="file:///C:\Users\DELL\AppData\Roaming\Tencent\Users\763560240\TIM\WinTemp\RichOle\A(MW{OFT`{9])2A" alt="img">[[}]IGU.png)</p>
+<p>  震惊，官方给出的示例竟然还不能用。</p>
+<p>  然后我就继续看官方的文档，看看有没有其他的接口可以用，最后发现IMixedRealityPointerHandler接口是可以用的，并且射线和触摸都可以使用这同一个接口。</p>
+<p>  唯一不一样也让我疑惑是不是bug的一个问题是，对于触摸的模式，是需要添加NearInteractionTouchable组件，但是当我把TouchableEventType的类型改成Touch时，我触摸物体并没有反应，然而当我改成Pointer时，就有了反应，但是官方文档里明明说Touch才是触摸的，让人很困惑。</p>
+<p>  这个接口的另一个好处是，MixedRealityPointerEventData类型的数据是可以返回落点的位置的，也就是eventData.Pointer.Result.Details.Point，这对于我所做的工作很有帮助。</p>
+<p>  ps.IMixedRealityFocusHandler接口似乎也是支持触摸的接口，不过我没有尝试。</p>
+
     </div>
 
     
@@ -220,14 +243,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/08/09/hello-world/" rel="prev" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
+                <a href="/2021/08/16/test-my-site/" rel="prev" title="test_my_site">
+                  <i class="fa fa-chevron-left"></i> test_my_site
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/08/16/TestPart/" rel="next" title="Hololens2获取触碰和射线落点的位置">
-                  Hololens2获取触碰和射线落点的位置 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
